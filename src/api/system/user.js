@@ -39,5 +39,12 @@ export default {
       url: `${api_name}/remove/${id}`,
       method: 'delete'
     })
+  },
+  //更改用户状态
+  updateStatus(id,status){
+    return request({
+      url:`${api_name}/updateStatus/${id}/${status}`,
+      method:'get'
+    })
   }
 }
