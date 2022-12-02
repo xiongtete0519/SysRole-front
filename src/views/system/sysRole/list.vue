@@ -82,7 +82,7 @@
 
 <script>
 //引入定义接口的js文件
-import api from "@/api/role/role";
+import api from "@/api/system/role";
 export default {
   name: "list",
   data(){
