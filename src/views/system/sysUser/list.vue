@@ -128,6 +128,33 @@ export default {
     this.fetchData()
   },
   methods:{
+    //删除
+    removeDataById(id){
+      this.$confirm('此操作将永久删除该记录, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(()=>{
+        api.removeById(id).then(response=>{
+          //提示
+          this.$message({
+            type:'success',
+            message:'删除成功!'
+          })
+          //刷新
+          this.fetchData()
+        })
+      })
+    },
+    //根据id查询，进行数据回显
+    edit(id){
+      //弹出框
+      this.dialogVisible=true
+      //调用接口查询
+      api.getUserId(id).then(response=>{
+        this.sysUser=response.data
+      })
+    },
     //添加或者修改
     saveOrUpdate(){
       if(!this.sysUser.id){//没有id值时执行添加
@@ -149,7 +176,14 @@ export default {
     },
     //修改
     update(){
-
+      api.update(this.sysUser).then(response=>{
+        //提示
+        this.$message.success('操作成功')
+        //关闭弹框
+        this.dialogVisible=false
+        //刷新页面
+        this.fetchData()
+      })
     },
     //添加弹框的方法
     add(){
