@@ -81,7 +81,7 @@ export const constantRoutes = [
         meta: {
           title: '菜单管理',
           icon: 'el-icon-s-unfold'
-        },
+        }
       },
       {
         path: 'assignAuth',
@@ -90,7 +90,7 @@ export const constantRoutes = [
           activeMenu: '/system/sysRole',
           title: '角色授权'
         },
-        hidden: true,
+        hidden: true
       }
     ]
   },
