@@ -19,6 +19,7 @@
   </div>
 </template>
 <script>
+/* eslint-disable */
 import api from '@/api/system/menu'
 export default {
   name: 'roleAuth',
