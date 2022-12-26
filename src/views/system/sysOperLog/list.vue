@@ -181,5 +181,15 @@ export default {
 </script>
 
 <style scoped>
-
+.search-div {
+  padding: 10px;
+  border: 1px solid #ebeef5;
+  border-radius: 3px;
+}
+.tools-div {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ebeef5;
+  border-radius: 3px;
+}
 </style>
