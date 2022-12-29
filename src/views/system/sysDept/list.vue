@@ -215,6 +215,7 @@ export default {
 
       //清空对象中的值
       this.sysDept=Object.assign({},defaultForm)
+      this.sysDept.id=''
       if (row) {
         this.sysDept.parentId = row.id
         this.sysDept.parentName = row.name
